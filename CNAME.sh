@@ -1,0 +1,1 @@
+echo 'xiaojuzi.fun' > CNAME
