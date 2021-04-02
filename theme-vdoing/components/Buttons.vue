@@ -83,10 +83,12 @@ export default {
       _recordScrollTop: null,
       COMMENT_SELECTOR_1: '#vuepress-plugin-comment', // 评论区元素的选择器1
       COMMENT_SELECTOR_2: '#valine-vuepress-comment', // 评论区元素的选择器2
-      COMMENT_SELECTOR_3: '.vssue' // 评论区元素的选择器3
+      COMMENT_SELECTOR_3: '.vssue', // 评论区元素的选择器3
+      isMobile: false
     }
   },
   mounted () {
+    this.isMobile = window.innerWidth < 876;
     this.currentMode = storage.get('mode') || 'auto'
 
     this.scrollTop = this.getScrollTop()
@@ -129,7 +131,7 @@ export default {
   },
   computed: {
     showToTop () {
-      return this.scrollTop > this.threshold
+      return this.scrollTop > this.threshold && this.isMobile
     }
   },
   methods: {

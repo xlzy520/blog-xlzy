@@ -77,6 +77,8 @@
 
     <Footer />
 
+    <ScrollTop />
+
     <Buttons
       ref="buttons"
       @toggle-theme-mode="toggleThemeMode"
@@ -112,6 +114,7 @@ import Sidebar from '@theme/components/Sidebar.vue'
 import Buttons from '@theme/components/Buttons.vue'
 import Footer from '@theme/components/Footer'
 import BodyBgImg from '@theme/components/BodyBgImg'
+import ScrollTop from '@theme/components/ScrollTop/index.vue'
 import { resolveSidebarItems } from '../util'
 import storage from 'good-storage' // 本地存储
 import _ from 'lodash'
@@ -120,7 +123,8 @@ const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
 const NAVBAR_HEIGHT = 58 // 导航栏高度
 
 export default {
-  components: { Home, Navbar, Page, CategoriesPage, TagsPage, ArchivesPage, Sidebar, Footer, Buttons, BodyBgImg },
+  components: { Home, Navbar, Page, CategoriesPage, TagsPage, ArchivesPage, Sidebar,
+    Footer, Buttons, BodyBgImg, ScrollTop },
 
   data () {
     return {
