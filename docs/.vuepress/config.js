@@ -15,8 +15,9 @@ module.exports = {
   markdown: {
     lineNumbers: true, // 代码行号
   },
+  shouldPreload: ()=> false,
   configureWebpack: config=>{
-    config.publicPath = isProd ? `https://cdn.jsdelivr.net/gh/xlzy520/blog-xlzy@gh-pages/` : '/'
+    config.output.publicPath = isProd ? `https://cdn.jsdelivr.net/gh/xlzy520/blog-xlzy@gh-pages/` : '/'
   },
 
   head,
