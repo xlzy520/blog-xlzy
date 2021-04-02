@@ -3,6 +3,8 @@ export const extRE = /\.(md|html)$/
 export const endingSlashRE = /\/$/
 export const outboundRE = /^[a-z]+:/i
 
+export const random = (a, b) => parseInt(Math.random() * (b - a + 1) + a, 10)
+
 export function normalize (path) {
   return decodeURI(path)
     .replace(hashRE, '')

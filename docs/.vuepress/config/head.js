@@ -10,6 +10,12 @@ module.exports = [
     },
   ],
   [
+    'script',
+    {
+      src: 'https://cdn.jsdelivr.net/gh/chanshiyucx/aurora/public/live2d/live2d.min.js',
+    },
+  ],
+  [
     'meta',
     {
       name: 'referrer',
