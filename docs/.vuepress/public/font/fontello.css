@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'Fontello';
+  src: url('./fontello.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='l-icon-']:before,
+[class*=' l-icon-']:before {
+  font-family: 'Fontello';
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.l-icon-heart:before {
+  content: '\e800';
+}
+.l-icon-fire:before {
+  content: '\e801';
+}
+.l-icon-graduation-cap:before {
+  content: '\e802';
+}
+.l-icon-calendar:before {
+  content: '\e803';
+}
+.l-icon-t-shirt:before {
+  content: '\e804';
+}
+.l-icon-emo-devil:before {
+  content: '\e805';
+}
+.l-icon-tag:before {
+  content: '\e806';
+}
+.l-icon-shop:before {
+  content: '\e807';
+}
+.l-icon-gift:before {
+  content: '\e808';
+}
+.l-icon-link:before {
+  content: '\e809';
+}
+.l-icon-comment:before {
+  content: '\e80a';
+}
+.l-icon-star:before {
+  content: '\e80b';
+}
+.l-icon-pencil:before {
+  content: '\e80c';
+}
+.l-icon-pilcrow:before {
+  content: '\e80d';
+}
+.l-icon-inbox:before {
+  content: '\e80e';
+}
+.l-icon-universal-access:before {
+  content: '\e80f';
+}
+.l-icon-cancel-outline:before {
+  content: '\e810';
+}
+.l-icon-camera:before {
+  content: '\e811';
+}
+.l-icon-clipboard:before {
+  content: '\e812';
+}
+.l-icon-left-open-outline:before {
+  content: '\e813';
+}
+.l-icon-right-open-outline:before {
+  content: '\e814';
+}
+.l-icon-bookmark-empty:before {
+  content: '\f097';
+}
+.l-icon-quote-left:before {
+  content: '\f10d';
+}
+.l-icon-quote-right:before {
+  content: '\f10e';
+}
+.l-icon-pagelines:before {
+  content: '\f18c';
+}
+.l-icon-venus-double:before {
+  content: '\f226';
+}
+.l-icon-tripadvisor:before {
+  content: '\f262';
+}
+.l-icon-fort-awesome:before {
+  content: '\f286';
+}
