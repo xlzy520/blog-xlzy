@@ -31,7 +31,9 @@ module.exports = [
     items: [
       {
         text: '面试题库',
+        link: '/interview/',
         items: [
+          {text: '面试题清单', link: '/interview/'},
           {text: 'HTML', link: '/pages/4e46b6/'},
           {text: 'CSS', link: '/pages/990fc5/'},
           {text: 'JS', link: '/pages/dcff3f/'},
