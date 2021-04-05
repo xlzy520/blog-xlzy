@@ -1,5 +1,31 @@
 // markdown容器样式
 
+details{
+  outline none;
+  margin-bottom 20px
+  &[open]{
+    summary{
+      color: $purple-dark;
+      &::marker{
+        color $purple-dark
+      }
+    }
+
+  }
+  summary{
+    outline none
+    cursor pointer
+    color: #42b983;
+    margin-bottom: 10px;
+    &::marker{
+      color #42b983
+    }
+  }
+  a{
+    padding-left: 15px;
+  }
+}
+
 // 居中容器
 .center-container
   text-align: center
