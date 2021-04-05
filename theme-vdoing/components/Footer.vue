@@ -80,7 +80,7 @@ export default {
       // audio: this.$config.APlayer,
       isMini: true,
       isMobile: false,
-      tips: [],
+      tips: '',
       audio: [
         {
           name: '三年幻想郷',
@@ -220,15 +220,18 @@ export default {
         case 'takephoto':
           window.Live2D.captureName = 'waifu.png'
           window.Live2D.captureFrame = true
-          this.$store.dispatch('showTips', { tips: clickTips.takePhoto })
+          this.tips = clickTips.takePhoto
+          // this.$store.dispatch('showTips', { tips: clickTips.takePhoto })
           break
         case 'talk':
           const inx = random(0, hitokotos.length - 1)
           const tips = hitokotos[inx].hitokoto
-          this.$store.dispatch('showTips', { tips })
+          this.tips = tips
+          // this.$store.dispatch('showTips', { tips })
           break
         case 'close':
-          this.$store.dispatch('showTips', { tips: clickTips.close })
+          this.tips = clickTips.close
+          // this.$store.dispatch('showTips', { tips: clickTips.close })
           setTimeout(() => {
             this.showWaifu = false
           }, 2000)
@@ -256,7 +259,156 @@ export default {
 </script>
 
 <style lang='stylus'>
-@require '../styles/footer.styl'
+.prpr {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: $zindex-3;
+  //@include sp-layout {
+  //  display: none;
+  //}
+
+  .waifu {
+    position: relative;
+    height: 250px;
+
+    .tips {
+      position: absolute;
+      margin: 0 15px;
+      padding: 5px 10px;
+      width: 250px;
+      min-height: 70px;
+      border-radius: 8px;
+      background-color: $bg-white-dim;
+      box-shadow: $card-shadow;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      opacity: 1;
+      animation: shake 50s ease-in-out 0s infinite;
+      z-index: $zindex-bottom;
+
+      &.pio {
+        margin-top: -6px;
+      }
+      &.tia {
+        margin-top: -12px;
+      }
+    }
+  }
+
+  .tool {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    .menu {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      background-color: $bg-white-deep;
+      transition: all 0.3s ease-out;
+      transform: translateX(-36px) scaleY(0.5);
+      transform-origin: bottom;
+
+      &:hover {
+        background-color: $purple-dark;
+        transform: translateX(0) scaleY(1);
+        .devil {
+          display: none;
+        }
+      }
+
+      ul {
+        margin-bottom: 66px;
+        width: 35px;
+        list-style: none;
+        text-align: center;
+        overflow: hidden;
+        li {
+          padding: 2px 0;
+          &:hover {
+            background-color: $purple-dim;
+          }
+          .icon {
+            color: $whitesmoke;
+          }
+        }
+      }
+
+      .devil {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 15px;
+        transform: translateY(-50%) scaleY(2);
+
+        .icon {
+          color: $purple;
+          &::before {
+            font-size: $font-size-small;
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+
+    .aplayer {
+      max-width: 310px;
+      background-color: transparent;
+      transition: all 0.3s ease-out;
+      &:hover {
+        transform: translateX(0);
+      }
+
+      .aplayer-miniswitcher {
+        width: 15px;
+        background-color: $purple-dark;
+        path {
+          fill: white;
+        }
+      }
+
+      .aplayer-body {
+        padding-right: 15px;
+        width: 310px;
+        border-radius: 0 3px 3px 0;
+        background-color: $bg-white-deep;
+      }
+
+      .aplayer-list {
+        border: none;
+        border-top-right-radius: 3px;
+        background-color: $bg-white-deep;
+        background-image: $aplayer-bg;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        li {
+          border: none;
+          &:hover,
+          &.aplayer-list-light {
+            background-color: $bg-aplayer;
+            span {
+              color: white;
+            }
+          }
+          .aplayer-list-cur {
+            background-color: $purple-dark !important;
+          }
+        }
+      }
+    }
+
+    .mini {
+      transform: translateX(-100%);
+    }
+  }
+}
+.cursor{
+  cursor: pointer;
+}
+
+//@require '../styles/footer.styl'
 
 // $mobileSidebarWidth = $sidebarWidth * 0.82
 .footer
