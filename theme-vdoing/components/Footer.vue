@@ -81,74 +81,6 @@ export default {
       isMini: true,
       isMobile: false,
       tips: '',
-      audio: [
-        {
-          name: '三年幻想郷',
-          artist: '神乃木製作所',
-          url: 'https://music.163.com/song/media/outer/url?id=767452.mp3',
-          cover: 'https://p1.music.126.net/QdxRMFtZCNkTsvJtNfpHpg==/565148976688829.jpg?param=130y130'
-        },
-        {
-          name: '水面の満月',
-          artist: '神乃木製作所',
-          url: 'https://music.163.com/song/media/outer/url?id=767726.mp3',
-          cover: 'https://p2.music.126.net/7AvaL3kt8uaC-ouLOr1C4w==/664105023188835.jpg?param=130y130'
-        },
-        {
-          name: '素直と不器用と意地っ張り',
-          artist: '三輪学',
-          url: 'https://music.163.com/song/media/outer/url?id=478095.mp3',
-          cover: 'https://p2.music.126.net/RIOvUtQejxeI5S2sP_nmiw==/3434874333355654.jpg?param=130y130'
-        },
-        {
-          name: '比翼の羽根',
-          artist: 'eufonius',
-          url: 'https://music.163.com/song/media/outer/url?id=718551.mp3',
-          cover: 'https://p2.music.126.net/c5-mvashaLJseFBwP3md4A==/109951163351769650.jpg?param=130y130'
-        },
-        {
-          name: '春よ、来い',
-          artist: 'SMOOTH J',
-          url: 'https://music.163.com/song/media/outer/url?id=511369.mp3',
-          cover: 'https://p1.music.126.net/DWZH0eov-uLttdjzpNB26w==/6050612487861686.jpg?param=130y130'
-        },
-        {
-          name: '山水之间',
-          artist: '许嵩',
-          url: 'https://music.163.com/song/media/outer/url?id=28802028.mp3',
-          cover: 'https://p1.music.126.net/WoR2LbM1IFauFpvhBWOjqA==/6642149743396577.jpg?param=130y130'
-        },
-        {
-          name: '我想牵着你的手',
-          artist: '许嵩',
-          url: 'https://music.163.com/song/media/outer/url?id=167903.mp3',
-          cover: 'https://p2.music.126.net/l-WSrtuUVlxINzqz6ADOOA==/45079976751178.jpg?param=130y130'
-        },
-        {
-          name: '花のように',
-          artist: '松たか子',
-          url: 'https://music.163.com/song/media/outer/url?id=610661.mp3',
-          cover: 'https://p1.music.126.net/048eUFnzBGOef54h84XeFg==/811439581298946.jpg?param=130y130'
-        },
-        {
-          name: '光るなら(TV动画《四月是你的谎言》OP1 ；TVアニメ「四月は君の嘘」OP1)',
-          artist: 'Goose house',
-          url: 'https://music.163.com/song/media/outer/url?id=29732992.mp3',
-          cover: 'https://p2.music.126.net/hspOpLQKDm_ODcZj9Rd1CQ==/109951163477942900.jpg?param=200y200'
-        },
-        {
-          name: 'secret base ~君がくれたもの~ (10 years after Ver.)',
-          artist: '茅野愛衣 / 戸松遥 / 早見沙織',
-          url: 'https://music.163.com/song/media/outer/url?id=33911781.mp3',
-          cover: 'httpss://p1.music.126.net/6fw0sKYnqkWjisM7w7_4DQ==/109951163078058569.jpg?param=180y180'
-        },
-        {
-          name: '恋愛サーキュレーション',
-          artist: '花澤香菜',
-          url: 'https://music.163.com/song/media/outer/url?id=579954.mp3',
-          cover: 'https://p2.music.126.net/hWrYLdhzF4waj4WL1dFPmg==/642114790633458.jpg?param=130y130'
-        },
-      ]
     }
   },
   computed: {
@@ -157,6 +89,9 @@ export default {
     },
     footer () {
       return this.$themeConfig.footer
+    },
+    audio(){
+      return this.$themeConfig.audio
     }
   },
   methods: {
@@ -252,6 +187,8 @@ export default {
     if (!this.isMobile) {
       this.dressup()
       this.loopTips()
+    } else {
+      this.showWaifu = false
     }
 
   },
@@ -367,6 +304,16 @@ export default {
         }
       }
 
+      &.aplayer-fixed.aplayer-narrow.aplayer-mobile{
+        .aplayer-body {
+          //width: 26px!important;
+          height: 26px;
+        }
+        .aplayer-pic .aplayer-play{
+          bottom: 0;
+        }
+      }
+
       .aplayer-body {
         padding-right: 15px;
         width: 310px;
@@ -380,11 +327,13 @@ export default {
         background-color: $bg-white-deep;
         background-image: $aplayer-bg;
         background-size: contain;
-        background-repeat: no-repeat;
+        //background-repeat: no-repeat;
         background-position: center center;
 
         li {
           border: none;
+          background-color: rgba(240,255,255,.6);
+          color: #333;
           &:hover,
           &.aplayer-list-light {
             background-color: $bg-aplayer;
@@ -393,6 +342,8 @@ export default {
             }
           }
           .aplayer-list-cur {
+            height 32px;
+            top: 0;
             background-color: $purple-dark !important;
           }
         }
