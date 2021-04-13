@@ -20,11 +20,13 @@ jobs:
         run: |
           npm install
           npm run build
-          npm run cname
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
+          external_repository: xlzy520/xlzy520.github.io
+          publish_branch: master  # default: gh-pages
+          cname: xlzy520.cn
           publish_dir: docs/.vuepress/dist
           commit_message: ${{ github.event.head_commit.message }}
           # keep_files: false
