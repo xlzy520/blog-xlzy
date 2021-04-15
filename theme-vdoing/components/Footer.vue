@@ -15,7 +15,8 @@
     </div>
 
     <live2d />
-    <APlayer :class="isMini && 'mini'" :audio="audio" preload="none" fixed mini @update:mini="handleUpdate" />
+    <APlayer class="my-player" :class="isMini && 'mini'" :audio="audio" preload="none"
+             fixed mini @update:mini="handleUpdate" />
 
     <!--Vdoing主题遵循MIT协议，完全开源且免费。如果您对主题的修改并不大，希望您保留主题的链接。-->
     Theme by
@@ -67,70 +68,72 @@ export default {
 </script>
 
 <style lang='stylus'>
-.aplayer {
-  max-width: 310px;
-  background-color: transparent;
-  transition: all 0.3s ease-out;
-  &:hover {
-    transform: translateX(0);
-  }
-
-  .aplayer-miniswitcher {
-    width: 15px;
-    background-color: $purple-dark;
-    path {
-      fill: white;
+.my-player{
+  &.aplayer {
+    max-width: 310px;
+    background-color: transparent;
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: translateX(0);
     }
-  }
 
-  &.aplayer-fixed.aplayer-narrow.aplayer-mobile{
+    .aplayer-miniswitcher {
+      width: 15px;
+      background-color: $purple-dark;
+      path {
+        fill: white;
+      }
+    }
+
+    &.aplayer-fixed.aplayer-narrow.aplayer-mobile{
+      .aplayer-body {
+        //width: 26px!important;
+        height: 26px;
+      }
+      .aplayer-pic .aplayer-play{
+        bottom: 0;
+      }
+    }
+
     .aplayer-body {
-      //width: 26px!important;
-      height: 26px;
+      padding-right: 15px;
+      width: 310px;
+      border-radius: 0 3px 3px 0;
+      background-color: $bg-white-deep;
     }
-    .aplayer-pic .aplayer-play{
-      bottom: 0;
-    }
-  }
 
-  .aplayer-body {
-    padding-right: 15px;
-    width: 310px;
-    border-radius: 0 3px 3px 0;
-    background-color: $bg-white-deep;
-  }
-
-  .aplayer-list {
-    border: none;
-    border-top-right-radius: 3px;
-    background-color: $bg-white-deep;
-    background-image: $aplayer-bg;
-    background-size: contain;
-    //background-repeat: no-repeat;
-    background-position: center center;
-
-    li {
+    .aplayer-list {
       border: none;
-      background-color: rgba(240,255,255,.6);
-      color: #333;
-      &:hover,
-      &.aplayer-list-light {
-        background-color: $bg-aplayer;
-        span {
-          color: white;
+      border-top-right-radius: 3px;
+      background-color: $bg-white-deep;
+      background-image: $aplayer-bg;
+      background-size: contain;
+      //background-repeat: no-repeat;
+      background-position: center center;
+
+      li {
+        border: none;
+        background-color: rgba(240,255,255,.6);
+        color: #333;
+        &:hover,
+        &.aplayer-list-light {
+          background-color: $bg-aplayer;
+          span {
+            color: white;
+          }
+        }
+        .aplayer-list-cur {
+          height 32px;
+          top: 0;
+          background-color: $purple-dark !important;
         }
       }
-      .aplayer-list-cur {
-        height 32px;
-        top: 0;
-        background-color: $purple-dark !important;
-      }
     }
   }
-}
 
-.mini {
-  transform: translateX(-100%);
+  &.mini {
+    transform: translateX(-100%);
+  }
 }
 .cursor{
   cursor: pointer;

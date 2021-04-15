@@ -80,7 +80,7 @@ export default {
       this.onOff = true;
       this.startX = evt.pageX;
       this.startY = evt.pageY;
-      document.addEventListener("mousemove",this.prprMousedown,false);
+      document.addEventListener("mousemove",this.prprMousemove,false);
       evt.preventDefault();
       document.addEventListener("mouseup",this.prprMouseup,false);
     },
@@ -203,7 +203,7 @@ export default {
 .prpr {
   position: fixed;
   bottom: 0;
-  right: 100px;
+  right: 50px;
   z-index: $zindex-3;
 
   .waifu {
@@ -237,7 +237,7 @@ export default {
   .tool {
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
 
     .menu {
       border-top-right-radius: 3px;
@@ -250,6 +250,9 @@ export default {
       &:hover {
         background-color: $purple-dark;
         transform: translateX(0) scaleY(1);
+        ul{
+          width: 60px;
+        }
         .devil {
           display: none;
         }
@@ -257,10 +260,11 @@ export default {
 
       ul {
         margin-bottom: 66px;
-        width: 35px;
+        width: auto;
         list-style: none;
         text-align: center;
         overflow: hidden;
+        padding-left: 5px;
         li {
           padding: 2px 0;
           &:hover {
