@@ -23,7 +23,7 @@ jobs:
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
           external_repository: xlzy520/xlzy520.github.io
           publish_branch: master  # default: gh-pages
           cname: xlzy520.cn
