@@ -17,7 +17,7 @@ module.exports = {
   },
   shouldPreload: ()=> false,
   configureWebpack: config=>{
-    config.output.publicPath = isProd ? `https://cdn.jsdelivr.net/gh/xlzy520/blog-xlzy@gh-pages/` : '/'
+    config.output.publicPath = isProd ? `https://cdn.jsdelivr.net/gh/xlzy520/xlzy520.github.io/` : '/'
   },
 
   head,
