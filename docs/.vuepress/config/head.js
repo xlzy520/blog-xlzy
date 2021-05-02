@@ -26,7 +26,7 @@ module.exports = [
     'meta',
     {
       name: 'keywords',
-      content: '执笔看墨花开,执笔看墨花开💜千千,前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+      content: '执笔看墨花开💜千千💜萧潇',
     },
   ],
   ['meta', { name: 'baidu-site-verification', content: 'DN3rafzeEO' }], // 百度统计的站长验证
