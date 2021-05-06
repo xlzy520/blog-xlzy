@@ -11,6 +11,7 @@ module.exports = [
         items: [
           { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
           { text: 'Vue', link: '/pages/5d463fbdb172d43b/' },
+          { text: 'React', link: '/pages/5d463fbdb172d43b/' },
           { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
           { text: 'CSS', link: '/pages/c8f128/'},
         ],
@@ -38,7 +39,7 @@ module.exports = [
           {text: 'CSS', link: '/pages/990fc5/'},
           {text: 'JS', link: '/pages/dcff3f/'},
           {text: 'Vue', link: '/pages/7a583e/'},
-          {text: 'React', link: '/pages/961224/'},
+          {text: 'React', link: '/pages/ccd7a7/'},
           // {text: '零碎', link: '/pages/a134b2/'}
         ]
       },
