@@ -34,6 +34,7 @@ module.exports = [
       ],
     },
   ],
+  ['fulltext-search'],
 
   [
     'one-click-copy',
