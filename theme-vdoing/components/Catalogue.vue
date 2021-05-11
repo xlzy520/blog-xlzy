@@ -142,7 +142,7 @@ dl, dd
   border-bottom 1px solid var(--borderColor)
   img
     width 80px
-    height 80px
+    height auto
     border-radius 2px
     margin-right 1rem
   .column-info
