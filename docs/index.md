@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /img/web.png
-heroText: 执笔看墨花开💜千千的博客
+heroText: 执笔看墨花开💜萧潇💜千千
 tagline: 微末凡尘 心向天空 努力学习。
 # actionText: 立刻进入 →
 # actionLink: /web/
