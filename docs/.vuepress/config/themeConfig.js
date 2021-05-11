@@ -126,7 +126,7 @@ module.exports = {
   ],
   blogger: {
     // 博主信息，显示在首页侧边栏
-    avatar: 'https://i0.hdslb.com/bfs/album/5f87da36a07024188d7fe0feb081a470a6cdcf31.jpg@200w_200h_1e_1c.webp',
+    avatar: 'https://i0.hdslb.com/bfs/album/5f87da36a07024188d7fe0feb081a470a6cdcf31.jpg@.webp',
     name: '执笔看墨花开',
     slogan: '玩转代码，顺其自然',
   },
