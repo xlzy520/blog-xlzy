@@ -36,15 +36,6 @@ module.exports = [
     ]
   },
   {
-    text: '更多',
-    link: '/more/',
-    items: [
-      { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
-      { text: '友情链接', link: '/friends/' },
-      { text: '关于', link: '/about/' },
-    ],
-  },
-  {
     text: '收藏',
     link: '/collection/',
     items: [
@@ -61,12 +52,16 @@ module.exports = [
     ],
   },
   {
-    text: '索引',
-    link: '/archives/',
+    text: '更多',
+    link: '/more/',
     items: [
       { text: '分类', link: '/categories/' },
       { text: '标签', link: '/tags/' },
       { text: '归档', link: '/archives/' },
+      { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
+      { text: '友情链接', link: '/friends/' },
+      { text: '关于', link: '/about/' },
     ],
   },
+ 
 ]
