@@ -75,6 +75,10 @@ export default {
       if(this.onOff) return false;
       this.prprStyle.right = this.moveX;
       this.prprStyle.bottom = this.moveY;
+      localStorage.setItem('live2d', JSON.stringify({
+        x: this.moveX,
+        y: this.moveY
+      }))
     },
     prprMousedown (evt){
       this.onOff = true;
@@ -88,6 +92,10 @@ export default {
       this.onOff=false;
       this.moveX = this.startX - evt.pageX+this.prprStyle.right;
       this.moveY = this.startY - evt.pageY+this.prprStyle.bottom;
+      this.changePrPrPosition()
+      evt.preventDefault();
+    },
+    changePrPrPosition(){
       if (this.prprDom) {
         this.css(this.prprDom,{
           "right":this.moveX+"px",
@@ -96,8 +104,6 @@ export default {
       } else {
         console.warn('prpr未加载或加载失败')
       }
-
-      evt.preventDefault();
     },
     dressup(switchWaifu = false) {
       if (switchWaifu) this.waifu = this.waifu === 'tia' ? 'pio' : 'tia'
@@ -185,6 +191,19 @@ export default {
     dropPanel() {
       // this.$store.commit('setShowPanel', true)
     },
+    initLive2dPosition() {
+      const localPosition = localStorage.getItem('live2d')
+      if (localPosition) {
+        const { x, y } = JSON.parse(localPosition)
+        this.moveX = x
+        this.moveY = y
+        this.prprStyle = {
+          bottom: y,
+          right: x,
+        }
+        this.changePrPrPosition()
+      }
+    }
   },
   mounted() {
     this.isMobile = window.innerWidth < 876;
@@ -192,6 +211,7 @@ export default {
       this.prprDom = document.querySelector('#prpr')
       this.dressup()
       this.loopTips()
+      this.initLive2dPosition()
     } else {
       this.showWaifu = false
     }
