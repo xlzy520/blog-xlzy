@@ -43,7 +43,6 @@ module.exports = [
       { text: '工具', link: '/pages/2294fc/' },
       { text: '设计 & CSS', link: '/pages/3d6da5/' },
       { text: '社区 & 平台 & 博客', link: '/pages/a09a50/' },
-      { text: '休闲娱乐', link: '/pages/e2847e/' },
       { text: '网站', link: '/pages/66a38c/' },
       { text: '推荐库', link: '/pages/e8ef9c/' },
       { text: 'You-Dont-Know', link: '/pages/b1721b/' },
