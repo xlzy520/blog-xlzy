@@ -37,7 +37,7 @@ module.exports = [
   },
   {
     text: '收藏',
-    link: '/collection/',
+    link: '/fav/',
     items: [
       { text: '前端', link: '/pages/702112/' },
       { text: '工具', link: '/pages/2294fc/' },
