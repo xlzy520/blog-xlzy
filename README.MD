@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/actions?query=workflow%3ACI"><img src="https://github.com/xlzy520/blog-xlzy/workflows/Deploy Vuepress/badge.svg" alt="CI"></a>
-  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/actions?query=workflow%3AbaiduPush"><img src="https://github.com/xlzy520/blog-xlzy/workflows/baiduPush/badge.svg" alt="baiduPush"></a>
+  <a href="https://github.com/xlzy520/blog-xlzy/actions?query=Deploy Vuepress"><img src="https://github.com/xlzy520/blog-xlzy/workflows/Deploy Vuepress/badge.svg" alt="CI"></a>
+  <a href="https://github.com/xlzy520/blog-xlzy/actions?query=workflow%3AbaiduPush"><img src="https://github.com/xlzy520/blog-xlzy/workflows/baiduPush/badge.svg" alt="baiduPush"></a>
 
 
 
