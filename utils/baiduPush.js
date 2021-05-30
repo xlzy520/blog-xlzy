@@ -14,6 +14,11 @@ if (!DOMAIN) {
   return
 }
 
+const childLinks = [
+  'https://xlzy520.cn/bili-short-url/',
+  'https://xlzy520.cn/bili-register-time/'
+]
+
 main();
 
 /**
@@ -24,12 +29,16 @@ function main() {
   const files = readFileList(); // 读取所有md文件数据
 
   files.forEach( file => {
-    const { data } = matter(fs.readFileSync(file.filePath, 'utf8')); 
+    const { data } = matter(fs.readFileSync(file.filePath, 'utf8'));
 
     if (data.permalink) {
       const link = `\r\n${DOMAIN}${data.permalink}`;
       console.log(link)
       fs.appendFileSync(urlsRoot, link);
     }
+  })
+  
+  childLinks.forEach(link => {
+    fs.appendFileSync(urlsRoot, link);
   })
 }
