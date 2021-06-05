@@ -128,7 +128,7 @@ module.exports = {
     // 博主信息，显示在首页侧边栏
     avatar: 'https://i0.hdslb.com/bfs/album/5f87da36a07024188d7fe0feb081a470a6cdcf31.jpg@.webp',
     name: '执笔看墨花开',
-    slogan: '玩转代码，顺其自然',
+    slogan: '顺其自然',
   },
   social: {
     // 社交图标，显示于博主信息栏和页脚栏
