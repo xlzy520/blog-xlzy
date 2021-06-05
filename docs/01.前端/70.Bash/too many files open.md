@@ -1,3 +1,13 @@
+---
+title: too many files open
+date: 2021-06-02 14:08:53
+permalink: /pages/9b4688/
+categories:
+  - 前端
+  - Bash
+tags:
+  - 
+---
 ### 背景
 
 运行公司项目的时候，由于项目文件数量过多，都需要watch，这个数量很容易超过Mac系统的最大文件监听数量，造成Chrome崩溃

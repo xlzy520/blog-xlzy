@@ -1,3 +1,13 @@
+---
+title: SPA单页应用直接使用百度统计
+date: 2021-05-30 18:03:17
+permalink: /pages/5d47d4/
+categories:
+  - 前端
+  - 杂文
+tags:
+  - 
+---
 # SPA单页应用直接使用百度统计
 
 ### 以前
