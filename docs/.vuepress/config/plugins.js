@@ -35,6 +35,22 @@ module.exports = [
     },
   ],
   ['fulltext-search'],
+  // ['algolia', {
+  //   apiKey: 'aadaabb12cf4379915fb65bee53ccb6b',
+  //   indexName: 'xlzy520'
+  // }],
+  [
+    '@vuepress/pwa',
+    {
+      serviceWorker: true,
+      updatePopup: {
+        '/': {
+          message: 'New content is available.',
+          buttonText: 'Refresh'
+        }
+      }
+    }
+  ],
 
   [
     'one-click-copy',
