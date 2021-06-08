@@ -13,11 +13,11 @@ module.exports = {
   docsDir: 'docs', // 编辑的文件夹
   editLinks: true, // 启用编辑
   editLinkText: '编辑',
-  algolia: {
-    appId: 'TFSYKG5V61',
-    apiKey: 'aadaabb12cf4379915fb65bee53ccb6b',
-    indexName: 'xlzy520'
-  },
+  // algolia: {
+  //   appId: 'TFSYKG5V61',
+  //   apiKey: 'aadaabb12cf4379915fb65bee53ccb6b',
+  //   indexName: 'xlzy520'
+  // },
   
 
   //*** 以下配置是Vdoing主题改动和新增的配置 ***//
