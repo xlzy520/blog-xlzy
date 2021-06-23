@@ -29,7 +29,7 @@
     "vuepress-plugin-zooming": "^1.1.7",
     "vuepress-theme-vdoing": "^1.8.1",
     "yamljs": "^0.3.0",
-    "postcss": "^8.2.15"
+    "optimize-css-assets-webpack-plugin": "5.0.4"
   },
   "dependencies": {
     "@moefe/vue-aplayer": "^2.0.0-beta.5",
