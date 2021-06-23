@@ -33,5 +33,8 @@
   "dependencies": {
     "@moefe/vue-aplayer": "^2.0.0-beta.5",
     "vuepress-plugin-comment": "^0.7.3"
+  },
+  "peerDependencies":{
+    "postcss": "^8.2.15"
   }
 }
