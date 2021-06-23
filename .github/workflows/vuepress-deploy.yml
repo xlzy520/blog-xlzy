@@ -15,7 +15,10 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
-
+      - name: setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
       - name: Install and Build 🔧
         run: |
           npm install
