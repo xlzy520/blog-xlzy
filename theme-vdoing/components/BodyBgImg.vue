@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       bgImg: '',
-      opacity: 0.5
+      opacity: 0.9
     }
   },
   mounted () {
@@ -29,6 +29,8 @@ export default {
         if (++count >= bodyBgImg.length) {
           count = 0
         }
+        const image = new Image()
+        image.src = bodyBgImg[count++]
         this.bgImg = bodyBgImg[count]
       }, 15000);
     }
