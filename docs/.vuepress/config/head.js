@@ -29,7 +29,7 @@ module.exports = [
       content: '执笔看墨花开💜千千💜萧潇',
     },
   ],
-  ['meta', { name: 'baidu-site-verification', content: 'LRJ4wO2E9A' }], // 百度统计的站长验证
+  ['meta', { name: 'baidu-site-verification', content: 'code-LRJ4wO2E9A' }], // 百度统计的站长验证
   ['meta', { name: 'theme-color', content: '#F9BF45' }], // 移动浏览器主题颜色
   // [
   //   'script',
