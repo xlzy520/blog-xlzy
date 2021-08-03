@@ -1,2 +1,2 @@
 cd docs/.vuepress/dist
-echo 'xlzy520.cn' > CNAME
+echo 'xiaojuzi.fun' > CNAME
