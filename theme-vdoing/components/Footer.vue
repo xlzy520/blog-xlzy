@@ -26,10 +26,10 @@
       title="本站主题"
     >Vdoing</a>
     <template v-if="footer">
-      | Copyright © {{ footer.createYear }}-{{ new Date().getFullYear() }}
-      <span
-        v-html="footer.copyrightInfo"
-      ></span>
+      <p>
+        © {{ footer.createYear }}-{{ new Date().getFullYear() }} 执笔看墨花开
+      </p>
+      <a href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备2021110554号</a>
     </template>
   </div>
 </template>
