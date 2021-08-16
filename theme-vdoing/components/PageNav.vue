@@ -182,8 +182,8 @@ function flatten (items, res) {
   .page-nav-centre
     position fixed
     top 50%
-    width 80px
-    height 70px
+    width 20px
+    height 16px
     margin-top -35px
     outline 0
     transition all 0.2s
