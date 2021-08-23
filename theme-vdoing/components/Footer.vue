@@ -29,7 +29,7 @@
       <p>
         © {{ footer.createYear }}-{{ new Date().getFullYear() }} 执笔看墨花开
       </p>
-      <a href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备2021110554号</a>
+      <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021110554号</a>
     </template>
   </div>
 </template>
