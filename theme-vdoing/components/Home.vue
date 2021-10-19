@@ -21,9 +21,12 @@
           <h1 v-if="homeData.heroText" id="main-title">
             {{ homeData.heroText }}
           </h1>
+
           <p v-if="homeData.tagline" class="description">
             {{ homeData.tagline }}
           </p>
+          <h1 class="deprecated">不再维护，使用 <a href="https://www.yuque.com/xlzy520/lgfyg2">语雀 </a>记录</h1>
+
           <p class="action" v-if="homeData.actionText && homeData.actionLink">
             <NavLink class="action-button" :item="actionLink" />
           </p>
@@ -340,6 +343,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.deprecated{
+  color: #333;
+  a {
+    text-decoration: underline;
+    color: orange;
+  }
+}
 .home-wrapper
   .banner
     width 100%
